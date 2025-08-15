@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgroConnect Register</title>
+  <link rel="stylesheet" href="farmerregister.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h2>AgroConnect Register</h2>
+
+    <!-- Register Toggle Buttons -->
+    <div class="toggle-buttons">
+      <button id="customerBtn" class="active" onclick="showForm('customer')">Customer</button>
+      <button id="farmerBtn" onclick="showForm('farmer')">Farmer</button>
+    </div>
+
+    <!-- Customer Register -->
+    <div id="customerForm" class="form-content">
+      <input type="text" id="customer-username" placeholder="Customer Username" />
+      <input type="email" id="customer-email" placeholder="Email (optional)" />
+      <input type="text" id="customer-phone" placeholder="Phone Number" />
+      <input type="text" id="customer-otp" placeholder="OTP" />
+      <input type="password" id="customer-password" placeholder="Password" />
+      <input type="password" id="customer-confirm-password" placeholder="Confirm Password" />
+      <button class="login-btn" onclick="registerCustomer()">Register as Customer</button>
+    </div>
+
+    <!-- Farmer Register -->
+    <div id="farmerForm" class="form-content hidden">
+      <input type="text" id="farmer-username" placeholder="Farmer Username" />
+      <input type="email" id="farmer-email" placeholder="Email (optional)" />
+      <input type="text" id="farmer-id" placeholder="Farmer ID" />
+      <input type="text" id="farmer-phone" placeholder="Phone Number" />
+      <input type="password" id="farmer-password" placeholder="Password" />
+      <input type="password" id="farmer-confirm-password" placeholder="Confirm Password" />
+      <button class="login-btn" onclick="registerFarmer()">Register as Farmer</button>
+    </div>
+
+    <div class="footer-note">
+      Hint: Use OTP <b>123456</b> for Customer registration
+    </div>
+  </div>
+
+  <script src="farmerregister.js"></script>
+</body>
+</html>

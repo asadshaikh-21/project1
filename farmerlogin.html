@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgroConnect Login</title>
+  <link rel="stylesheet" href="farmerlogin.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h2>AgroConnect Login</h2>
+
+    <!-- Login Toggle Buttons -->
+    <div class="toggle-buttons">
+      <button id="customerBtn" class="active">Customer</button>
+      <button id="farmerBtn">Farmer</button>
+    </div>
+
+    <!-- Customer Login -->
+    <div id="customerForm" class="form-content">
+      <input type="text" id="customer-username" placeholder="Customer Username" />
+      <input type="password" id="customer-password" placeholder="Password" />
+      <button class="login-btn" id="loginCustomerBtn">Login as Customer</button>
+    </div>
+
+    <!-- Farmer Login -->
+    <div id="farmerForm" class="form-content hidden">
+      <input type="text" id="farmer-username" placeholder="Farmer Username" />
+      <input type="password" id="farmer-password" placeholder="Password" />
+      <button class="login-btn" id="loginFarmerBtn">Login as Farmer</button>
+    </div>
+
+    <div class="footer-note">
+      Hint: Use <b>customer/1234</b> or <b>farmer/1234</b>
+    </div>
+  </div>
+
+  <script src="farmerlogin.js">
+</script>
+</body>
+</html>
+
+

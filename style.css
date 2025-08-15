@@ -1,0 +1,184 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b520e;
+  color: white;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  
+  
+}
+
+.search-bar {
+  flex-grow: 1;
+  max-width: 500px;
+  display: flex;
+  margin: 0 24px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #1b5e20;
+}
+
+.auth button {
+  background-color: white;
+  color: #388e3c;
+  border: 2px solid #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth button:hover {
+  background-color: #ffffff;
+  color: #1b5e20;
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  padding: 20px 20px;
+  margin-top: 0%;
+}
+
+.welcome-section h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 00px;
+  color: #2e7d32;
+}
+
+.welcome-section p {
+  font-size: 20px;
+  color: #4e944f;
+  padding: 20px 20px;
+  margin-top: 0px;
+}
+
+.carousel {
+  position: relative;
+  margin: 40px auto;
+  width: 80%;
+  max-width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+  display: flex;
+  width: 300%; /* 3 slides */
+  transition: transform 0.5s ease;
+  transform: translateX(0);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(46, 125, 50, 0.7);
+  border: none;
+  color: white;
+  font-size: 30px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+  z-index: 20;
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(27, 94, 32, 0.9);
+}
+
+.arrow.prev {
+  left: 15px;
+}
+
+.arrow.next {
+  right: 15px;
+}
+
+
+.slides img {
+  max-width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Animation */
+.slides {
+  display: flex;
+    align-items: center;
+  width: 300%;
+  animation: slide 96s infinite ease-in-out; /* 3 slides * 32s each (30s visible + 2s transition) */
+}
+
+
+.auth {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.background {
+ 
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+              url("https://wallpapercave.com/wp/wp15239785.webp");
+  background-size: cover;
+}
+.naav 
+{
+  padding: 00px 00px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  font-size: 16px;
+
+}

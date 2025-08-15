@@ -1,0 +1,240 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #a8e063, #56ab2f);
+  color: #1b3a17;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(11, 82, 14, 0.95);
+  padding: 14px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: #d0f0c0;
+}
+
+.search-bar {
+  flex-grow: 1;
+  max-width: 500px;
+  margin: 0 25px;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: #f0f9f1;
+  color: #1b3a17;
+  font-weight: 500;
+}
+
+.search-bar button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #1b5e20;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.auth button {
+  background-color: #d0f0c0;
+  color: #2e7d32;
+  border: none;
+  padding: 8px 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+}
+
+.auth button:hover {
+  background-color: #a8e063;
+  color: #1b3a17;
+}
+
+.cart-icon {
+  width: 28px;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+
+/* Main Section */
+.vegetable-page {
+  max-width: 1200px;
+  margin: 50px auto 80px;
+  background: #fff;
+  padding: 30px 40px 40px;
+  border-radius: 15px;
+  box-shadow: 0 20px 50px rgb(0 0 0 / 0.15);
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2e7d32;
+}
+
+/* Vegetable Grid */
+.vegetable-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 28px;
+}
+
+/* Vegetable Card */
+.veg-card {
+  background: #f7fdf6;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.veg-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 30px rgb(0 0 0 / 0.15);
+}
+
+.veg-img-wrapper {
+  width: 120px;
+  height: 120px;
+  background: #d7f0cc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+  box-shadow: inset 0 4px 8px rgb(0 0 0 / 0.05);
+}
+
+.veg-img-wrapper img {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+  user-select: none;
+}
+
+.veg-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1b3a17;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.add-cart-btn {
+  background-color: #56ab2f;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgb(86 171 47 / 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.add-cart-btn:hover {
+  background-color: #3a7d16;
+  box-shadow: 0 8px 20px rgb(58 125 22 / 0.75);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vegetable-page {
+    padding: 25px 20px 30px;
+    margin: 30px 15px 50px;
+  }
+
+  .veg-card {
+    padding: 18px 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar {
+    max-width: 200px;
+    margin: 0 10px;
+  }
+
+  .vegetable-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 18px;
+  }
+
+  .veg-img-wrapper {
+    width: 90px;
+    height: 90px;
+  }
+
+  .veg-img-wrapper img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  .veg-card h2 {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .add-cart-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
